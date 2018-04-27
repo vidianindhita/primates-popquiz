@@ -175,6 +175,9 @@
         $('html, body').animate({
           scrollTop: $("#question-1").offset().top
         }, 500)
+      }),
+      $(window).on('beforeunload', function() {
+        $(window).scrollTop(0);
       })
     });
 
