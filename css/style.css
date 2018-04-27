@@ -1,0 +1,396 @@
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+body {
+  padding: 1rem;
+  color: #797e86;
+  font-family: 'Lato', sans-serif;
+}
+
+.question {
+  padding-top: 100px;
+ /* margin-bottom: 250px;*/
+  height: 700px;
+}
+
+.answers {
+  margin-top: 50px;
+}
+
+h1 {
+  color: #18191b;
+  margin-bottom: 2rem;
+  font-size: 1.5em;
+  font-family: 'Lato', sans-serif;
+}
+
+h2 {
+  font-size: 2em;
+  font-family: 'Lato', sans-serif;
+}
+
+section {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+section > div {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"]:not(:disabled) ~ label {
+  cursor: pointer;
+}
+input[type="radio"]:disabled ~ label {
+  color: #bcc2bf;
+  border-color: #bcc2bf;
+  box-shadow: none;
+}
+
+label {
+  display: block;
+  background: white;
+  border: 5px solid #5bb859;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  box-shadow: 0px 3px 10px -2px rgba(161, 170, 166, 0.5);
+  position: relative;
+  height: 360px;
+}
+
+input[type="radio"]:checked + label {
+  background: #5bb859;
+  color: white;
+}
+input[type="radio"]:checked + label::after {
+  color: #3d3f43;
+  font-family: FontAwesome;
+  border: 5px solid #5bb859;
+  content: "\f00c";
+  font-size: 34px;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 60px;
+  width: 60px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.25);
+}
+
+input[type="radio"]#control_01:checked + label {
+  background: #c43333;
+  border-color: #c43333;
+}
+
+input[type="radio"]#control_01:checked + label::after {
+  background: #c43333;
+  border-color: #c43333;
+  border: 5px solid #c43333;
+  background: white;
+  font-family: FontAwesome;
+  content: "\f00d";
+}
+
+input[type="radio"]#control_02:checked + label {
+  background: #c43333;
+  border-color: #c43333;
+}
+
+input[type="radio"]#control_02:checked + label::after {
+  background: #c43333;
+  border-color: #c43333;
+  border: 5px solid #c43333;
+  background: white;
+  font-family: FontAwesome;
+  content: "\f00d";
+}
+
+input[type="radio"]#control_05:checked + label {
+  background: #c43333;
+  border-color: #c43333;
+}
+
+input[type="radio"]#control_05:checked + label::after {
+  background: #c43333;
+  border-color: #c43333;
+  border: 5px solid #c43333;
+  background: white;
+  font-family: FontAwesome;
+  content: "\f00d";
+}
+
+input[type="radio"]#control_06:checked + label {
+  background: #c43333;
+  border-color: #c43333;
+}
+
+input[type="radio"]#control_06:checked + label::after {
+  background: #c43333;
+  border-color: #c43333;
+  border: 5px solid #c43333;
+  background: white;
+  font-family: FontAwesome;
+  content: "\f00d";
+}
+
+input[type="radio"]#control_07:checked + label {
+  background: #c43333;
+  border-color: #c43333;
+}
+
+input[type="radio"]#control_07:checked + label::after {
+  background: #c43333;
+  border-color: #c43333;
+  border: 5px solid #c43333;
+  background: white;
+  font-family: FontAwesome;
+  content: "\f00d";
+}
+
+input[type="radio"]#control_08:checked + label {
+  background: #c43333;
+  border-color: #c43333;
+}
+
+input[type="radio"]#control_08:checked + label::after {
+  background: #c43333;
+  border-color: #c43333;
+  border: 5px solid #c43333;
+  background: white;
+  font-family: FontAwesome;
+  content: "\f00d";
+}
+
+input[type="radio"]#control_10:checked + label {
+  background: #c43333;
+  border-color: #c43333;
+}
+
+input[type="radio"]#control_10:checked + label::after {
+  background: #c43333;
+  border-color: #c43333;
+  border: 5px solid #c43333;
+  background: white;
+  font-family: FontAwesome;
+  content: "\f00d";
+}
+
+input[type="radio"]#control_11:checked + label {
+  background: #c43333;
+  border-color: #c43333;
+}
+
+input[type="radio"]#control_11:checked + label::after {
+  background: #c43333;
+  border-color: #c43333;
+  border: 5px solid #c43333;
+  background: white;
+  font-family: FontAwesome;
+  content: "\f00d";
+}
+
+p {
+  font-weight: 900;
+}
+
+@media only screen and (max-width: 700px) {
+  section {
+    flex-direction: column;
+  }
+}
+
+.ml10 {
+  position: relative;
+  font-weight: 900;
+  font-size: 4em;
+}
+
+.ml10 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml10 .letter {
+  display: inline-block;
+  line-height: 1em;
+  transform-origin: 0 0;
+}
+
+.ml2 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.ml3 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.ml3 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.ml4 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.ml4 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.ml5 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.ml5 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.primate-image {
+  height: 200px;
+  width: 200px;
+  margin-top: 50px;
+}
+
+/* Global Button Styles */
+a.animated-button:link, a.animated-button:visited {
+  position: relative;
+  display: block;
+  margin: 30px auto 0;
+  padding: 14px 15px;
+  color: #000;
+  font-size:34px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: .08em;
+  border-radius: 5px;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  font-family: 'Lato', sans-serif;
+  width: 300px;
+}
+a.animated-button:link:after, a.animated-button:visited:after {
+  content: "";
+  position: absolute;
+  height: 0%;
+  left: 50%;
+  top: 50%;
+  width: 150%;
+  z-index: -1;
+  -webkit-transition: all 0.75s ease 0s;
+  -moz-transition: all 0.75s ease 0s;
+  -o-transition: all 0.75s ease 0s;
+  transition: all 0.75s ease 0s;
+  font-family: 'Lato', sans-serif;
+  font-size:34px;
+}
+a.animated-button:link:hover, a.animated-button:visited:hover {
+  color: #FFF;
+  text-shadow: none;
+}
+a.animated-button:link:hover:after, a.animated-button:visited:hover:after {
+  height: 450%;
+}
+a.animated-button:link, a.animated-button:visited {
+  font-family: 'Lato', sans-serif;
+  font-size:34px;
+  position: relative;
+  display: block;
+  margin: 30px auto 0;
+  padding: 14px 15px;
+  color: #000;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: .08em;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(1, 0, 0, 0.2);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/* Victoria Buttons */
+
+a.animated-button.victoria-four {
+  border: 5px solid #5bb859;
+}
+a.animated-button.victoria-four:after {
+  background: #5bb859;
+  opacity: .5;
+  -moz-transform: translateY(-50%) translateX(-50%) rotate(90deg);
+  -ms-transform: translateY(-50%) translateX(-50%) rotate(90deg);
+  -webkit-transform: translateY(-50%) translateX(-50%) rotate(90deg);
+  transform: translateY(-50%) translateX(-50%) rotate(90deg);
+}
+a.animated-button.victoria-four:hover:after {
+  opacity: 1;
+  height: 600% !important;
+}
+
+#submit-quiz {
+  padding-top: 250px;
+}
+
+.modal-content h1 {
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: 4em;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
+.modal-content h3 {
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: 2em;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
+.modal-content {
+  height: 500px;
+  width: 700px;
+  border: 1px solid #5bb859;
+  background-color: #5bb859;
+  padding-top: 100px;
+  margin-top: 100px;
+}
+
+a.animated-button.victoria-four.modal-button {
+    border: 5px solid #c43333;
+    margin-top: 50px;
+}

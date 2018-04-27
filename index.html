@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Radio Selects: Flexbox and Fun</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:400,700'>
+  <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div class="question" id="question-1">
+    <h1 class="ml2 title">Which diet requires the most energy?</h1>
+    <section class="answers">
+      <div>
+        <input type="radio" id="control_01" name="select" value="1">
+        <label for="control_01">
+          <img class="primate-image" src="assets/Asset-1.png" alt="Howler Monkey">
+          <h2>Folivore</h2>
+        </label>
+      </div>
+      <div>
+        <input type="radio" id="control_02" name="select" value="2">
+        <label for="control_02">
+          <img class="primate-image" src="assets/Asset-2.png" alt="Spider Monkey">
+          <h2>Frugivore</h2>
+        </label>
+      </div>
+      <div>
+        <input type="radio" id="control_03" name="select" value="3">
+        <label for="control_03">
+          <img class="primate-image" src="assets/Asset-3.png" alt="Capuchin Monkey">
+          <h2>Omnivore</h2>
+        </label>
+      </div>
+    </section>
+  </div>
+  <div class="question" id="question-2">
+    <h1 class="ml3 title">Which diet is the lowest in quality?</h1>
+    <section class="answers">
+      <div>
+        <input type="radio" id="control_04" name="select2" value="1">
+        <label for="control_04">
+          <img class="primate-image" src="assets/Asset-1.png" alt="Howler Monkey">
+          <h2>Folivore</h2>
+        </label>
+      </div>
+      <div>
+        <input type="radio" id="control_05" name="select2" value="2">
+        <label for="control_05">
+          <img class="primate-image" src="assets/Asset-2.png" alt="Spider Monkey">
+          <h2>Frugivore</h2>
+        </label>
+      </div>
+      <div>
+        <input type="radio" id="control_06" name="select2" value="3">
+        <label for="control_06">
+          <img class="primate-image" src="assets/Asset-3.png" alt="Capuchin Monkey">
+          <h2>Omnivore</h2>
+        </label>
+      </div>
+    </section>
+  </div>
+  <div class="question" id="question-3">
+    <h1 class="ml4 title">Which diet is the highest in quality?</h1>
+    <section class="answers">
+      <div>
+        <input type="radio" id="control_07" name="select3" value="1">
+        <label for="control_07">
+          <img class="primate-image" src="assets/Asset-1.png" alt="Howler Monkey">
+          <h2>Folivore</h2>
+        </label>
+      </div>
+      <div>
+        <input type="radio" id="control_08" name="select3" value="2">
+        <label for="control_08">
+          <img class="primate-image" src="assets/Asset-2.png" alt="Spider Monkey">
+          <h2>Frugivore</h2>
+        </label>
+      </div>
+      <div>
+        <input type="radio" id="control_09" name="select3" value="3">
+        <label for="control_09">
+          <img class="primate-image" src="assets/Asset-3.png" alt="Capuchin Monkey">
+          <h2>Omnivore</h2>
+        </label>
+      </div>
+    </section>
+  </div>
+  <div class="question" id="question-4">
+    <h1 class="ml5 title">Which diet requires the most skills?</h1>
+    <section class="answers">
+      <div>
+        <input type="radio" id="control_10" name="select4" value="1">
+        <label for="control_10">
+          <img class="primate-image" src="assets/Asset-1.png" alt="Howler Monkey">
+          <h2>Folivore</h2>
+        </label>
+      </div>
+      <div>
+        <input type="radio" id="control_11" name="select4" value="2">
+        <label for="control_11">
+          <img class="primate-image" src="assets/Asset-2.png" alt="Spider Monkey">
+          <h2>Frugivore</h2>
+        </label>
+      </div>
+      <div>
+        <input type="radio" id="control_12" name="select4" value="3">
+        <label for="control_12">
+          <img class="primate-image" src="assets/Asset-3.png" alt="Capuchin Monkey">
+          <h2>Omnivore</h2>
+        </label>
+      </div>
+    </section>
+  </div>
+  <div class="question" id="submit-quiz">
+    <div class="row">
+    <div class="col-md-12 text-center">
+      <a href="" class="btn btn-sm animated-button victoria-four" data-toggle="modal" data-target="#myModal">Submit</a>
+    </div>
+  </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <h1>Woohoo! You're a primate expert!</h1>
+        <h3>Now you can take your primate picture at photobooth.</h3>
+        <a href="" class="btn btn-sm animated-button victoria-four modal-button" data-dismiss="modal" onClick="window.location.reload()" id="start-over">START OVER</a>
+      </div>
+      
+    </div>
+  </div>
+
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script>
+
+    $(document).ready(function () {
+      $('input[id=control_03]').click(function() {
+      $('html, body').animate({
+        scrollTop: $("#question-2").offset().top
+      }, 500)
+    }),
+      $('input[id=control_04]').click(function (){
+        $('html, body').animate({
+          scrollTop: $("#question-3").offset().top
+        }, 500)
+      }),
+      $('input[id=control_09]').click(function (){
+        $('html, body').animate({
+          scrollTop: $("#question-4").offset().top
+        }, 500)
+      }),
+      $('input[id=control_12]').click(function (){
+        $('html, body').animate({
+          scrollTop: $("#submit-quiz").offset().top
+        }, 500)
+      }),
+      $('input[type=button]').click(function (){
+        $('html, body').animate({
+          scrollTop: $("#question-1").offset().top
+        }, 500)
+      }),
+      $('input[id=start-over]').click(function() {
+      $('html, body').animate({
+        scrollTop: $("#question-1").offset().top
+      }, 500)
+    });
+
+    // Wrap every letter in a span
+    $('.ml2').each(function(){
+      $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+    });
+
+    anime.timeline({loop: true})
+      .add({
+        targets: '.ml2 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+          return 70*i;
+        }
+      }).add({
+        targets: '.ml2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+      });
+
+      // Wrap every letter in a span
+      $('.ml3').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+      });
+
+      anime.timeline({loop: true})
+        .add({
+          targets: '.ml3 .letter',
+          scale: [4,1],
+          opacity: [0,1],
+          translateZ: 0,
+          easing: "easeOutExpo",
+          duration: 950,
+          delay: function(el, i) {
+            return 70*i;
+          }
+        }).add({
+          targets: '.ml3',
+          opacity: 0,
+          duration: 1000,
+          easing: "easeOutExpo",
+          delay: 1000
+        });
+
+        // Wrap every letter in a span
+        $('.ml4').each(function(){
+          $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+        });
+
+        anime.timeline({loop: true})
+          .add({
+            targets: '.ml4 .letter',
+            scale: [4,1],
+            opacity: [0,1],
+            translateZ: 0,
+            easing: "easeOutExpo",
+            duration: 950,
+            delay: function(el, i) {
+              return 70*i;
+            }
+          }).add({
+            targets: '.ml4',
+            opacity: 0,
+            duration: 1000,
+            easing: "easeOutExpo",
+            delay: 1000
+          });
+
+          // Wrap every letter in a span
+          $('.ml5').each(function(){
+            $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+          });
+
+          anime.timeline({loop: true})
+            .add({
+              targets: '.ml5 .letter',
+              scale: [4,1],
+              opacity: [0,1],
+              translateZ: 0,
+              easing: "easeOutExpo",
+              duration: 950,
+              delay: function(el, i) {
+                return 70*i;
+              }
+            }).add({
+              targets: '.ml5',
+              opacity: 0,
+              duration: 1000,
+              easing: "easeOutExpo",
+              delay: 1000
+            });
+  </script>
+
+  
+</body>
+</html>
