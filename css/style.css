@@ -201,6 +201,20 @@ input[type="radio"]#control_11:checked + label::after {
   content: "\f00d";
 }
 
+input[type="radio"]#control_14:checked + label {
+  background: #c43333;
+  border-color: #c43333;
+}
+
+input[type="radio"]#control_14:checked + label::after {
+  background: #c43333;
+  border-color: #c43333;
+  border: 5px solid #c43333;
+  background: white;
+  font-family: FontAwesome;
+  content: "\f00d";
+}
+
 p {
   font-weight: 900;
 }
@@ -268,6 +282,16 @@ p {
 }
 
 .ml5 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.ml6 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.ml6 .letter {
   display: inline-block;
   line-height: 1em;
 }
@@ -395,4 +419,12 @@ a.animated-button.victoria-four:hover:after {
 a.animated-button.victoria-four.modal-button {
     border: 5px solid #c43333;
     margin-top: 50px;
+}
+
+.last-answer label {
+  height: 150px;
+}
+
+.last-answer label h2 {
+  margin-top: 40px;
 }

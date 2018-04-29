@@ -8,6 +8,7 @@
 
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:400,700'>
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -21,7 +22,7 @@
 
 <body>
   <div class="question" id="question-1">
-    <h1 class="ml2 title">Which diet requires the most energy?</h1>
+    <h1 class="ml2 title">Which diet requires the most energy</h1>
     <section class="answers">
       <div>
         <input type="radio" id="control_01" name="select" value="1">
@@ -47,7 +48,7 @@
     </section>
   </div>
   <div class="question" id="question-2">
-    <h1 class="ml3 title">Which diet is the lowest in quality?</h1>
+    <h1 class="ml3 title">Which diet is the lowest in quality</h1>
     <section class="answers">
       <div>
         <input type="radio" id="control_04" name="select2" value="1">
@@ -73,7 +74,7 @@
     </section>
   </div>
   <div class="question" id="question-3">
-    <h1 class="ml4 title">Which diet is the highest in quality?</h1>
+    <h1 class="ml4 title">Which diet is the highest in quality</h1>
     <section class="answers">
       <div>
         <input type="radio" id="control_07" name="select3" value="1">
@@ -99,7 +100,7 @@
     </section>
   </div>
   <div class="question" id="question-4">
-    <h1 class="ml5 title">Which diet requires the most skills?</h1>
+    <h1 class="ml5 title">Which diet requires the most skills</h1>
     <section class="answers">
       <div>
         <input type="radio" id="control_10" name="select4" value="1">
@@ -124,6 +125,23 @@
       </div>
     </section>
   </div>
+  <!-- <div class="question" id="question-5">
+    <h1 class="ml6 title">Does your human brain get bigger if you eat a lot of fruits</h1>
+    <section class="answers">
+      <div class="last-answer">
+        <input type="radio" id="control_13" name="select" value="1">
+        <label for="control_13">
+          <h2>NO</h2>
+        </label>
+      </div>
+      <div class="last-answer">
+        <input type="radio" id="control_14" name="select" value="2">
+        <label for="control_14">
+          <h2>YES</h2>
+        </label>
+      </div>
+    </section>
+  </div> -->
   <div class="question" id="submit-quiz">
     <div class="row">
     <div class="col-md-12 text-center">
@@ -171,6 +189,11 @@
           scrollTop: $("#submit-quiz").offset().top
         }, 500)
       }),
+      // $('input[id=control_13]').click(function (){
+      //   $('html, body').animate({
+      //     scrollTop: $("#submit-quiz").offset().top
+      //   }, 500)
+      // }),
       $('input[type=button]').click(function (){
         $('html, body').animate({
           scrollTop: $("#question-1").offset().top
@@ -271,6 +294,30 @@
               }
             }).add({
               targets: '.ml5',
+              opacity: 0,
+              duration: 1000,
+              easing: "easeOutExpo",
+              delay: 1000
+            });
+
+          // Wrap every letter in a span
+          $('.ml6').each(function(){
+            $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+          });
+
+          anime.timeline({loop: true})
+            .add({
+              targets: '.ml6 .letter',
+              scale: [4,1],
+              opacity: [0,1],
+              translateZ: 0,
+              easing: "easeOutExpo",
+              duration: 950,
+              delay: function(el, i) {
+                return 70*i;
+              }
+            }).add({
+              targets: '.ml6',
               opacity: 0,
               duration: 1000,
               easing: "easeOutExpo",
